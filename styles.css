@@ -1,0 +1,168 @@
+:root {
+    --nutmeg: hsl(14, 45%, 36%);
+    --dark-raspberry: hsl(332, 51%, 32%);
+    --white: hsl(0, 0%, 100%);
+    --rose-white: hsl(330, 100%, 98%);
+    --eggshell: hsl(30, 54%, 90%);
+    --lightgrey: hsl(30, 18%, 87%);
+    --wenge-brown: hsl(30, 10%, 34%);
+    --dark-charcoal: hsl(24, 5%, 18%);
+
+    --mobile-size: 768px;
+}
+
+@font-face {
+    font-family: 'YoungSerif';
+    src: url('assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    color: var(--dark-charcoal);
+    background-color: var(--eggshell);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+        margin: 0;
+    }
+}
+
+ul {
+    margin: 0;
+    padding-bottom: 1rem;
+}
+
+ul li {
+    padding-bottom: .7rem;
+    position: relative;
+    color: hsl(30, 10%, 34%);
+}
+
+.omelette li::marker {
+    color: hsl(332, 51%, 32%);
+}
+
+ul li::marker {
+    color: hsl(14, 45%, 36%);
+}
+
+ol li {
+    padding-left: 1rem;
+
+    @media (max-width: 768px) {
+        padding-left: 0;
+    }
+}
+
+ol li::marker {
+    color: hsl(14, 45%, 36%);
+    font-weight: bold;
+}
+
+.container {
+    background-color: white;
+    max-width: 900px;
+    margin-inline: auto;
+    padding: 24px;
+    border-radius: 15px;
+}
+
+.container img {
+    max-width: 100%;
+    border-radius: 15px;
+    display: block;
+    margin-inline: auto;
+    margin-bottom: 1.25rem;
+}
+
+.omelette h1 {
+    margin-bottom: 1rem;
+    color: hsl(24, 5%, 18%);
+    font-family: youngserif;
+    letter-spacing: 1px;
+}
+
+.omelette article {
+    background-color: hsl(330, 100%, 98%);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+}
+
+.omelette article h3 {
+    color: hsl(332, 51%, 32%);
+    margin-bottom: 0.5rem;
+}
+
+.instructions {
+    border-top: 1px solid hsl(30, 18%, 87%);
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.instructions li {
+    color: hsl(30, 10%, 34%);
+}
+
+h2 {
+    color: var(--nutmeg);
+}
+
+.nutrition-table {
+    width: 100%;
+    margin-left: -2rem !important;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 768px) {
+        margin-left: 0 !important;
+    }
+}
+
+.nutrition-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nutrition-title {
+    flex-basis: 20rem;
+    padding-left: 4rem;
+    color: hsl(30, 10%, 34%);
+
+    @media (max-width: 768px) {
+        flex-basis: 8rem;
+        padding-left: .8rem;
+    }
+}
+
+.nutrition-amount {
+    color: var(--nutmeg);
+    font-weight: bold;
+}
+
+hr.table-line {
+    border: none;
+    margin: 0 0 0 1.9rem;
+    border-top: 2px solid #ccc;
+    width: 94%;
+}
+
+.attribution a {
+    text-decoration: none;
+}
